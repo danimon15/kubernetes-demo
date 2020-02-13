@@ -16,17 +16,17 @@ spec:
       - name: tomcat
         image: tomcat:9.0
         ports:
-        - containerPort: 8080
+        - containerPort: 8081
         livenessProbe:
           httpGet:
             path: /
-            port: 8080
+            port: 8081
           initialDelaySeconds: 30
           periodSeconds: 30
         readinessProbe:
           httpGet:
             path: /
-            port: 8080
+            port: 8081
           initialDelaySeconds: 15
           periodSeconds: 3
 
